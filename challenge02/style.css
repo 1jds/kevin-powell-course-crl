@@ -37,11 +37,11 @@ body {
 }
 
 .intro-content > * {
-  width: 50%;
+  width: 80%;
 }
 
 .more-content {
+  width: 80%;
   max-width: 750px;
-  width: 50%;
   margin: 0 auto;
 }
