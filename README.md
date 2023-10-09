@@ -9,3 +9,4 @@ So far I have completed 'Day 1'
 - `rem` is always relative to the `root` ('root element').
 - If font sizes and other sizes are in `rems`, then we can just change the `font-size` in a media query to shrink everything at different screen sizes.
 - Setting paddings for buttons (for e.g.) in `ems` makes sense, because then if we make a smaller or larger button by changing the font-size, the padding will scale along with that font-size change - as opposed to if we set the padding in `rems`, then the padding would remain the same, even if the font-size shrunk or grew. So, this allows for responsive buttons.
+- Paddings and margins and things could be set using `ems`, so that they become more responsive, because they will change relative to the `font-size` that is set on their element. So, when `ems` are used for font-sizes, they refer to and compound the font-size one-level up, but when they are set on things like padding, they refer to the font-size of their own element.
