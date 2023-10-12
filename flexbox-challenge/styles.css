@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Roboto:wght@300;400&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+}
+
+h2 {
+  font-size: 2.25rem;
+}
+
+p {
+  line-height: 2rem;
+  font-size: 1.3125rem;
+}
+
+.container {
+  width: 80%;
+  max-width: 1128px;
+  margin: 0 auto;
+}
+
+.hero {
+  background: #f3eed9;
+  min-height: 660px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero__small-text {
+  text-transform: uppercase;
+  font-size: 1.125rem;
+  letter-spacing: 1ch;
+}
+
+.hero__main-text {
+  font-size: 3.75rem;
+  color: #824936;
+  margin: 0;
+  line-height: 3.75rem;
+}
+
+.details {
+  margin: 5em 0;
+}
+
+.details__flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.details__h2 {
+  color: #824936;
+  text-align: center;
+}
+
+.details__p-text {
+  width: 48%;
+}
+
+.illustration-one {
+  background: #222c2a;
+  color: #fff;
+  padding: 5em 0;
+}
+
+.illustrations-flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.first-flex-item {
+  width: 48%;
+}
+
+.second-flex-item {
+  width: 48%;
+}
+
+.illustration-h2 {
+  color: #f3eed9;
+}
+
+/* This is a helpful way to crop images in the front-end that have annoying white borders, etc.  */
+.img-crop {
+  clip-path: inset(1px 1px 1px 1px);
+}
+
+.illustration-two {
+  background: #824936;
+  padding: 5em 0;
+  color: #fff;
+}
