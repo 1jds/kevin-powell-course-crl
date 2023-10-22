@@ -7,7 +7,6 @@ font-family: 'Oswald', sans-serif; */
 *::after,
 *::before {
   box-sizing: border-box;
-  margin: 0;
 }
 
 body {
@@ -20,17 +19,29 @@ h3 {
   font-family: "Oswald", sans-serif;
 }
 
-/* 
-This '.flow > * + *' business is to handle collapsing margins on text elements. 
-This accompanies and 'undoes' some of the 'margin: 0' from 
-the above selector.
-.flow > * + * {
-  margin-top: 2em;
-} */
+.btn {
+  all: unset;
+  background: #a59678;
+  border-radius: 100px;
+  padding: 0.25em 1em;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+}
+
+/* This is a variation of Kevin Powell's '.flow > * + *' business.
+It is to handle collapsing margins on text elements. */
+.flow > *:first-child {
+  margin-top: 0;
+}
+.flow > *:last-child {
+  margin-bottom: 0;
+}
 
 p {
   font-family: "Montserrat", sans-serif;
-  line-height: 2rem;
+  line-height: 1.75rem;
 }
 
 img {
@@ -81,17 +92,6 @@ img {
   font-size: 5.625rem;
 }
 
-.btn {
-  all: unset;
-  background: #a59678;
-  border-radius: 100px;
-  padding: 0.25em 1em;
-  color: #fff;
-  text-transform: uppercase;
-  font-family: "Oswald", sans-serif;
-  text-align: center;
-}
-
 .btn:hover,
 .btn:focus {
   opacity: 0.75;
@@ -104,7 +104,7 @@ img {
 
 .container {
   max-width: 1200px;
-  width: 90%;
+  width: 85%;
   margin: 0 auto;
   padding: 2.5rem 0em;
 }
@@ -150,12 +150,15 @@ nav {
 }
 
 .hero-container {
-  gap: 1.5rem;
-  align-items: flex-start;
+  align-items: flex-end;
 }
 
 .hero-title {
   font-size: clamp(2.25rem, 1.0227rem + 6.1364vw, 5.625rem);
+}
+
+.hero-below-title {
+  /* align-self: flex-end; */
 }
 
 .key-points {
@@ -167,8 +170,54 @@ nav {
 }
 
 .key-points-div {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 1rem;
+  gap: 1rem; */
+  text-align: center;
+}
+
+.article-comments-container {
+  gap: 2rem;
+}
+
+.article-comment {
+  padding: 1rem;
+  text-align: center;
+}
+
+.footer-title {
+  font-size: clamp(2.5rem, 1.8636rem + 3.1818vw, 4.25rem);
+  text-align: center;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer li {
+  margin-top: 1rem;
+}
+
+footer a {
+  text-decoration: none;
+  color: inherit;
+  font-family: "Montserrat", sans-serif;
+}
+
+footer a:hover,
+footer a:focus,
+footer a:focus-visible {
+  opacity: 0.75;
+}
+
+@media (min-width: 700px) {
+  .flex {
+    flex-direction: row;
+  }
+
+  .hero-title {
+    margin: 0;
+    line-height: 3rem;
+  }
 }
