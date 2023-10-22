@@ -23,7 +23,7 @@ h3 {
   all: unset;
   background: #a59678;
   border-radius: 100px;
-  padding: 0.25em 1em;
+  padding: 0.25em 1.5em;
   color: #fff;
   text-transform: uppercase;
   font-family: "Oswald", sans-serif;
@@ -92,8 +92,7 @@ img {
   font-size: 5.625rem;
 }
 
-.btn:hover,
-.btn:focus {
+.btn:is(:hover, :focus, :focus-visible) {
   opacity: 0.75;
   cursor: pointer;
 }
@@ -112,6 +111,7 @@ img {
 .flex {
   display: flex;
   flex-direction: column;
+  gap: 2rem;
 }
 
 header {
@@ -143,9 +143,7 @@ nav {
   text-transform: uppercase;
 }
 
-.nav-link-item-anchor:hover,
-.nav-link-item-anchor:focus,
-.nav-link-item-anchor:focus-visible {
+.nav-link-item-anchor:is(:hover, focus, focus-visible) {
   opacity: 0.75;
 }
 
@@ -154,7 +152,9 @@ nav {
 }
 
 .hero-title {
+  margin: 0;
   font-size: clamp(2.25rem, 1.0227rem + 6.1364vw, 5.625rem);
+  line-height: clamp(3.25rem, 2.5909rem + 4.5455vw, 6rem);
 }
 
 .hero-below-title {
@@ -166,7 +166,7 @@ nav {
 }
 
 .key-points-container {
-  gap: 2em;
+  /* gap: 2rem; */
 }
 
 .key-points-div {
@@ -177,7 +177,7 @@ nav {
 }
 
 .article-comments-container {
-  gap: 2rem;
+  /* gap: 2rem; */
 }
 
 .article-comment {
@@ -205,9 +205,7 @@ footer a {
   font-family: "Montserrat", sans-serif;
 }
 
-footer a:hover,
-footer a:focus,
-footer a:focus-visible {
+footer a:is(:hover, :focus, :focus-visible) {
   opacity: 0.75;
 }
 
@@ -216,8 +214,43 @@ footer a:focus-visible {
     flex-direction: row;
   }
 
-  .hero-title {
-    margin: 0;
-    line-height: 3rem;
+  .articles-container {
+    flex-direction: column;
+  }
+
+  .article-comments-container {
+    gap: 1rem;
+  }
+
+  body > *:not(:first-child) .container {
+    padding: 3rem 0;
+  }
+
+  .footer-flex-container {
+    justify-content: space-evenly;
+  }
+
+  .first-footer-flex-item {
+    width: 35%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .articles-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .article-main {
+    width: 60%;
+  }
+
+  .article-comments-container {
+    flex-direction: column;
+    width: 30%;
+  }
+
+  body > *:not(:first-child) .container {
+    padding: 5rem 0;
   }
 }
