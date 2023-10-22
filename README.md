@@ -13,6 +13,8 @@
 
 The code for this can be found in the directory 'final-challenge'. Here are screen-shots for the three screen sizes targeted: viz. mobile (at 320px), tablet (at about 800px), and desktop (from 1000px up).
 
-<img src="./final-challenge/Mobile-screen-width.png">
-<img src="./final-challenge/Tablet-screen-width.png">
 <img src="./final-challenge/Desktop-screen-width.png">
+
+<img src="./final-challenge/Tablet-screen-width.png">
+
+<img src="./final-challenge/Mobile-screen-width.png">
