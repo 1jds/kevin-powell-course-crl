@@ -3,6 +3,12 @@
 /* font-family: 'Montserrat', sans-serif;
 font-family: 'Oswald', sans-serif; */
 
+/* 
+  ===============
+   Reset
+  =============== 
+*/
+
 *,
 *::after,
 *::before {
@@ -13,21 +19,16 @@ body {
   margin: 0;
 }
 
+/* 
+===============
+Global Styles
+=============== 
+*/
+
 h1,
 h2,
 h3 {
   font-family: "Oswald", sans-serif;
-}
-
-.btn {
-  all: unset;
-  background: #a59678;
-  border-radius: 100px;
-  padding: 0.25em 1.5em;
-  color: #fff;
-  text-transform: uppercase;
-  font-family: "Oswald", sans-serif;
-  text-align: center;
 }
 
 /* This is a variation of Kevin Powell's '.flow > * + *' business.
@@ -46,6 +47,28 @@ p {
 
 img {
   max-width: 100%;
+}
+
+/* 
+===============
+Utility Classes
+=============== 
+*/
+
+.btn {
+  all: unset;
+  background: #a59678;
+  border-radius: 100px;
+  padding: 0.25em 1.5em;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+}
+
+.btn:is(:hover, :focus, :focus-visible) {
+  opacity: 0.75;
+  cursor: pointer;
 }
 
 .font-white {
@@ -92,17 +115,12 @@ img {
   font-size: 5.625rem;
 }
 
-.btn:is(:hover, :focus, :focus-visible) {
-  opacity: 0.75;
-  cursor: pointer;
-}
-
 .bg-dark {
   background: #3b4050;
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1400px;
   width: 85%;
   margin: 0 auto;
   padding: 2.5rem 0em;
@@ -113,6 +131,13 @@ img {
   flex-direction: column;
   gap: 2rem;
 }
+
+/* 
+  ===============
+     Sections
+      Header
+  =============== 
+*/
 
 header {
   background: #2e323f;
@@ -131,10 +156,7 @@ nav {
   list-style: none;
   flex-wrap: wrap;
   align-items: center;
-  gap: 1rem;
-}
-
-.nav-link-item {
+  gap: 1.5rem;
 }
 
 .nav-link-item-anchor {
@@ -147,6 +169,13 @@ nav {
   opacity: 0.75;
 }
 
+/* 
+  ===============
+     Sections
+       Hero
+  =============== 
+*/
+
 .hero-container {
   align-items: flex-end;
 }
@@ -157,33 +186,39 @@ nav {
   line-height: clamp(3.25rem, 2.5909rem + 4.5455vw, 6rem);
 }
 
-.hero-below-title {
-  /* align-self: flex-end; */
-}
+/* 
+  ===============
+     Sections
+    Key Points
+  =============== 
+*/
 
 .key-points {
   background: #f1f1f1;
 }
 
-.key-points-container {
-  /* gap: 2rem; */
-}
-
 .key-points-div {
-  /* display: flex;
-  flex-direction: column;
-  gap: 1rem; */
   text-align: center;
 }
 
-.article-comments-container {
-  /* gap: 2rem; */
-}
+/* 
+  ===============
+     Sections
+      Article
+  =============== 
+*/
 
 .article-comment {
   padding: 1rem;
   text-align: center;
 }
+
+/* 
+  ===============
+     Sections
+      Footer
+  =============== 
+*/
 
 .footer-title {
   font-size: clamp(2.5rem, 1.8636rem + 3.1818vw, 4.25rem);
@@ -208,6 +243,12 @@ footer a {
 footer a:is(:hover, :focus, :focus-visible) {
   opacity: 0.75;
 }
+
+/* 
+  ===============
+   Media Queries
+  =============== 
+*/
 
 @media (min-width: 700px) {
   .flex {
